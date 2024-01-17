@@ -1,5 +1,8 @@
-# Astro Starter Kit: Basics
+# Web de Esland reimaginada.
 
+Creada con fines educativos y didacticos.
+
+⚠️**Esta pagina no es la oficial
 ```sh
 npm create astro@latest -- --template basics
 ```
