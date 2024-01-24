@@ -1,95 +1,120 @@
 ---
 import BentoItem from "./BentoItem.astro";
+
+import { getI18N } from "../i18n/";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <section
   class={`
-		w-full max-w-[1400px]
-		grid grid-cols-10 auto-rows-[30rem] gap-4
-		mx-auto p-20
-    `}
+    w-full max-w-[1400px]
+    grid lg:grid-cols-10 auto-rows-[30rem] gap-4
+    mx-auto p-6 md:p-12 lg:p-20
+  `}
 >
+  <BentoItem class="col-span-10 lg:col-span-4" title={i18n.BENTO_TITLE_1}>
+    <div
+      slot="image"
+      class="background transition-scale absolute bottom-0 left-0 top-0
+        -z-10 h-full w-full bg-blue-950
+        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      data-src="/mountain.webp"
+    >
+    </div>
+
+    <p
+      slot="content"
+      class="max-w-xl text-base md:text-lg"
+      set:html={i18n.BENTO_CONTENT_1}
+    />
+  </BentoItem>
   <BentoItem
-    class="col-span-10 md:col-span-4"
-    title="ANDORRA: EL CÉNIT DE LOS PREMIOS ESLAND"
+    class="col-span-10 lg:col-span-6"
+    title={i18n.BENTO_TITLE_2}
+    subtitle={i18n.BENTO_SUBTITLE_2}
   >
     <div
       slot="image"
-      class="absolute left-0 top-0 bottom-0 w-full
-				h-full group-hover:scale-110 transition-scale duration-1000
-				ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat -z-10 bg-blue-950"
-      style="background-image: url('/mountain.webp')"
+      class="background transition-scale absolute bottom-0 left-0 top-0
+    -z-10 h-full w-full bg-blue-800
+    bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      data-src="/pistas.webp"
     >
     </div>
-    <p slot="content" class="max-w-xl">
-      Una nueva edición <strong>cargada de novedades</strong> y contenido, que empezará
-      varias semanas antes de la ansiada gala. <strong
-        >Directos especiales, colaboraciones, conciertos y mucho más</strong
-      > en lo que será una auténtica fiesta dedicada a la creación de contenido.
-    </p>
+    <p
+      slot="content"
+      class="max-w-xl text-base md:text-lg"
+      set:html={i18n.BENTO_CONTENT_2}
+    />
   </BentoItem>
-
   <BentoItem
-    class="col-span-10 md:col-span-6"
-    title="LA ALFOMBRA BLANCA"
-    subtitle="16 de febrero de 2024"
+    class="col-span-10 lg:col-span-6"
+    title={i18n.BENTO_TITLE_3}
+    subtitle={i18n.BENTO_SUBTITLE_3}
   >
-		<div
+    <div
       slot="image"
-      class="absolute left-0 top-0 bottom-0 w-full
-				h-full group-hover:scale-110 transition-scale duration-1000
-				ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat -z-10 bg-blue-800"
-      style="background-image: url('/pistas.webp')"
+      class="background transition-scale absolute bottom-0 left-0 top-0
+        -z-10 h-full w-full bg-blue-900
+        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      data-src="/grefg.webp"
     >
     </div>
-    <p slot="content">
-      Este año, el momento de la alfombra azul será sustituido y mejorado,
-      gracias a los increíbles paisajes andorranos, por una <strong
-        >alfombra blanca en plena nieve</strong
-      >, situada en las <strong>pistas de esquí de Andorra.</strong>
-    </p>
+    <p
+      slot="content"
+      class="max-w-xl text-base md:text-lg"
+      set:html={i18n.BENTO_CONTENT_3}
+    />
   </BentoItem>
-
-  <BentoItem
-    class="col-span-10 md:col-span-6"
-    title="LA GALA"
-    subtitle="17 de febrero de 2024"
-  >
-		<div
+  <BentoItem class="col-span-10 lg:col-span-4" title={i18n.BENTO_TITLE_4}>
+    <div
       slot="image"
-      class="absolute left-0 top-0 bottom-0 w-full
-				h-full group-hover:scale-110 transition-scale duration-1000
-				ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat -z-10 bg-blue-900"
-      style="background-image: url('/grefg.webp')"
+      class="background transition-scale absolute bottom-0 left-0 top-0
+        -z-10 h-full w-full bg-blue-950
+        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      data-src="/laptop.webp"
     >
     </div>
-    <p slot="content">
-      Una gala de premios llena de <strong
-        >contenido de primer nivel y muchas sorpresas</strong
-      >, en la que se descubrirán los <strong>ganadores</strong> de esta tercera
-      edición de los Premios ESLAND.
-    </p>
-  </BentoItem>
-  
-  <BentoItem
-    class="col-span-10 md:col-span-4"
-    title="DISFRUTA DEL REDDIT DE LA COMUNIDAD"
-  >
-		<div
-      slot="image"
-      class="absolute left-0 top-0 bottom-0 w-full
-				h-full group-hover:scale-110 transition-scale duration-1000
-				ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat -z-10 bg-blue-950"
-      style="background-image: url('/laptop.webp')"
-    >
-    </div>
-    <p slot="content">
-      Este año, el reddit no formará parte de las votaciones de los premios,
-      pero sí que <strong>formará parte de la comunidad</strong>. El subreddit
-      oficial de los Premios ESLAND está abierto para ti, para que compartas tus
-      clips, tus opiniones y para que <strong
-        >interactúes con toda la comunidad</strong
-      > del streaming hispanohablante.
-    </p>
+    <p
+      slot="content"
+      class="max-w-xl text-base md:text-lg"
+      set:html={i18n.BENTO_CONTENT_4}
+    />
   </BentoItem>
 </section>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const backgrounds = document.querySelectorAll(
+      ".background"
+    ) as NodeListOf<HTMLElement>
+
+    if (window.IntersectionObserver == null) {
+      backgrounds.forEach((bkg) => {
+        bkg.style.backgroundImage = "url('" + bkg.dataset.src + "')"
+      })
+      return
+    }
+
+    function handleIntersection(entries: IntersectionObserverEntry[]) {
+      entries.map((entry) => {
+        if (entry.isIntersecting) {
+          const target = entry.target as HTMLElement
+          const { style, dataset } = target
+          // Item has crossed our observation
+          // threshold - load src from data-src
+          style.backgroundImage = "url('" + dataset.src + "')"
+          // Job done for this item - no need to watch it!
+          observer.unobserve(entry.target)
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      rootMargin: "100px",
+    })
+
+    backgrounds.forEach((bkg) => observer.observe(bkg))
+  })
+</script>

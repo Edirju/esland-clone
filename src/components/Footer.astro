@@ -2,7 +2,7 @@
 import Logo from "./Logo.astro";
 import Link from './Link.astro';
 
-import { getI18N } from "../i18n/";
+import { getI18N } from "../i18n/index";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
@@ -127,7 +127,7 @@ const i18n = getI18N({ currentLocale });
             {i18n.FOOTER.PRODUCED_BY}
           </h2>
           <a
-            class="hover:scale-110 transition block"
+            class="hover:opacity-100 opacity-70 transition-opacity duration-300 block"
             href="https://www.ubiq.ad/"
             target="_blank"
             rel="noreferrer"
