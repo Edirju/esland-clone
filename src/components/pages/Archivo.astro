@@ -2,8 +2,12 @@
 import Layout from "../../layouts/Layout.astro";
 import HeroContainer from '../HeroContainer.astro'
 import Button from "../Button.astro";
-import Numeros from "../Numeros.astro";
-import Galeria from "../Galeria.astro";
+// import Numeros from "../Numeros.astro";
+// import Galeria from "../Galeria.astro";
+// import Numeros1 from "../Numeros1";
+import Editions from "../Editions"
+
+const edicion = "2"
 
 import { getI18N } from "../../i18n/";
 const { currentLocale } = Astro;
@@ -16,15 +20,15 @@ const i18n = getI18N({ currentLocale });
 	>
 		<h1 class="text-4xl text-center uppercase mb-20 font-tomaso tracking-widest lg:text-6xl">{i18n.ARCHIVO.HERO_TITLE}</h1>
 
-		<Button class=" animate-fade-up" url="https://www.youtube.com/watch?v=1YmpPrqKP-g">
-			{i18n.VIDEO_BUTTON}
+		<Button class=" animate-fade-up uppercase" url="https://www.youtube.com/watch?v=1YmpPrqKP-g">
+			{i18n.ARCHIVO.HERO_BUTTON}
 		</Button>
 
 	</HeroContainer>
 
-	<main>
-		<Galeria />
-		<Numeros />
+	<main class="pb-24">
+		<Editions i18n={i18n} client:load />
+		
 	</main>
 </Layout>
 

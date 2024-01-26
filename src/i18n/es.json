@@ -7,7 +7,9 @@
     "INFO_TITLE": "Información - Premios ESLAND 2024",
     "INFO_DESCRIPTION": "Descubre todo lo que necesitas saber sobre los Premios ESLAND 2024 y descarga el Kit de Prensa",
     "VOTE_TITLE": "Vota por tus creadores de contenido favoritos - Premios ESLAND 2024",
-    "VOTE_DESCRIPTION": "Vota por tus creadores de contenido favoritos de España, Latinoamérica y Andorra"
+    "VOTE_DESCRIPTION": "Vota por tus creadores de contenido favoritos de España, Latinoamérica y Andorra",
+    "ERROR_404_TITLE": "404 Página no encontrada - Premios ESLAND 2024",
+    "ERROR_404_DESCRIPTION": "404 Página no encontrada - Premios ESLAND 2024"
   },
   "HEADER": {
     "LOGO": "Volver a la página de inicio de los Premios ESLAND"
@@ -43,6 +45,21 @@
     "COUNTER_NEWS": "noticias en prensa",
     "COUNTER_MEDIA": "en medios ganados"
   },
+  "VOTE": {
+    "TITLE": "Las votaciones ya están aquí",
+    "CALL_TO_VOTE": "¡Empezar con las votaciones!",
+    "INTRO_CONTENT": "Ha llegado el momento más importante. <strong>Votar en la 3ª Edición de los Premios </strong>. Para que tus votos se contabilicen de forma correcta, te dejamos algunos consejos:",
+    "ADVICE_1": "Vota, <strong>por orden de preferencia</strong>, hasta 4 nominados por categoría.",
+    "ADVICE_2": "<strong>No es obligatorio votar en cada categoría.</strong>",
+    "ADVICE_3": "No es obligatorio pero sí recomendable el <strong>uso del voto rankeado</strong>.",
+    "ADVICE_4": "Una vez tengas clara tu elección, <strong>asegúrate de pulsar “enviar mis votos”.</strong>",
+    "ADVICE_5": "<strong>Recuerda compartir tus votos</strong> en redes sociales.",
+    "ADVICE_6": "Elige sabiamente y <strong>revisa tus votos</strong>, solo tienes una oportunidad.",
+    "TIME_LIMIT": "Las votaciones estarán abiertas hasta el domingo 14 de enero a las 24:00h (hora española)",
+    "VOTES_CASTED": "Votos realizados"
+  },
+  "CATEGORY": "Categoría",
+  "LOG_OUT": "Cerrar sesión",
   "FOOTER": {
     "DISCLAIMER": "© ESLAND 2021 - 2024 Todos los derechos reservados. - Esta no es la web oficial, desarrollada por @midudev para fines educativos",
     "LEGAL": {
@@ -272,11 +289,10 @@
       "LAST_UPDATE": "Fecha de la última actualización: 12 del 12 de 2023."
     }
   },
-  "INFO": {
-    "TITLE_HERO_1": "Los premios",
-    "TITLE_HERO_2": "ESLAND",
-    "GALLERY_TITLE": "GALERÍA",
-    "GALLERY_TEXT": "Algunos de los mejores momentos de la gala que pasarán a la historia."
+  "GALLERY": {
+    "TITLE": "GALERÍA",
+    "TEXT": "Algunos de los mejores momentos de la gala que pasarán a la historia.",
+    "LOAD_MORE": "Descúbrelas todas"
   },
   "LEGAL_NOTICE": {
     "TITLE": "Aviso legal",
@@ -369,5 +385,9 @@
     "MODIFICATIONS": {
       "LAST_UPDATE": "Fecha de la última actualización: 12 del 12 de 2023."
     }
+  },
+  "ERROR_404": {
+    "TITLE": "Página no encontrada",
+    "BACK_HOMEPAGE_BTN": "Volver a la página de inicio"
   }
 }
